@@ -10,16 +10,15 @@ function checkAnswer () {
         return;
     }
 
+    const userAnswer = selectedAnswer.value;
 
-    const userAnswer = selectedAnswer.value
-  
-     //Compare the User’s Answer with the Correct Answer
-    if(userAnswer === correctAnswer){
-        document.getElementById("feedback").textContent = "Correct! Well done."
+    // Compare the User’s Answer with the Correct Answer
+    if (userAnswer === correctAnswer) {
+        document.getElementById("feedback").textContent = "Correct! Well done.";
     } else {
-        document.getElementById("feedback").textContent = "That's incorrect. Try again!"
+        document.getElementById("feedback").textContent = "That's incorrect. Try again!";
     }
 }
 
-       //Add an Event Listener to the Submit Button
-       document.getElementById("submit-answer").addEventListener ("click", checkAnswer);
+// Add an Event Listener to the Submit Button
+document.getElementById("submit-answer").addEventListener("click", checkAnswer);
